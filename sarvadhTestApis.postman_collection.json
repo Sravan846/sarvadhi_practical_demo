@@ -1,0 +1,565 @@
+{
+	"info": {
+		"_postman_id": "b81d59a2-5c26-4835-b481-176190aeb722",
+		"name": "sarvadhTestApis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23412886"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "tester",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "tester123@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "tester@123",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text"
+								},
+								{
+									"key": "profile",
+									"type": "file",
+									"src": "/C:/Users/dell/Pictures/l1vGV0yE_400x400.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/v1/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"v1",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"tester123@gmail.com\",\r\n    \"password\": \"tester@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/v1/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"v1",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Il9pZCI6IjY1ZjJkZjU2ZmVkYzNlODkzZTlkNWY5NiIsIm5hbWUiOiJ0ZXN0ZXIiLCJlbWFpbCI6InRlc3RlckBnbWFpbC5jb20iLCJpc0FkbWluIjpmYWxzZSwiZGF0ZSI6IjIwMjQtMDMtMTRUMTE6Mjg6MjIuNTM3WiIsIl9fdiI6MH0sImlhdCI6MTcxMDQxNjUyNX0.iJboWm-vbc0t9ioKAAANSxFsypzSKp_cIz30iRhYV4Y",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/v1/user/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"v1",
+								"user",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserDetail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Il9pZCI6IjY1ZjMxMWQ4ZWQ2YjdkM2RlMzYyNDQyMiIsInByb2ZpbGUiOiJodHRwOi8vbG9jYWxob3N0OjQwMDAvdXBsb2Fkcy9wcm9maWxlcy8xNzEwNDI4NjMyMDgwX2wxdkdWMHlFXzQwMHg0MDAuanBnIiwibmFtZSI6InRlc3RlciIsImVtYWlsIjoidGVzdGVyMTIzQGdtYWlsLmNvbSIsImdlbmRlciI6Im1hbGUiLCJpc0FkbWluIjpmYWxzZSwiZm9sbG93ZXJzIjpbXSwiZGF0ZSI6IjIwMjQtMDMtMTRUMTU6MDM6NTIuMTMxWiIsIl9fdiI6MH0sImlhdCI6MTcxMDQyODY1M30.dO1l2hpvfrbrni_i7B83uJOL-8KxvUFv0XgQvblp70g",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/v1/user/getMyDetails",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"v1",
+								"user",
+								"getMyDetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateUserDetails",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Il9pZCI6IjY1ZjJlZmQ1NzU1YmVmZTRkNjk2NWIwOSIsInByb2ZpbGUiOiJ1cGxvYWRzL3Byb2ZpbGVzLzE3MTA0MTk5MjU1NDlfbDF2R1YweUVfNDAweDQwMC5qcGciLCJuYW1lIjoidGVzdGVyIiwiZW1haWwiOiJ0ZXN0ZXJAZ21haWwuY29tIiwiZ2VuZGVyIjoibWFsZSIsImlzQWRtaW4iOmZhbHNlLCJkYXRlIjoiMjAyNC0wMy0xNFQxMjozODo0NS41NjdaIiwiX192IjowfSwiaWF0IjoxNzEwNDE5OTQ2fQ.Euv2G_XVtvf1flmqisos44aHHLp40ZmGc1b2sULWFRQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "tester123",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "tester123@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text"
+								},
+								{
+									"key": "profile",
+									"type": "file",
+									"src": "/C:/Users/dell/Downloads/orbytex.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/v1/user/updateyMyDetails",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"v1",
+								"user",
+								"updateyMyDetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "admin can delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Il9pZCI6IjY1ZjJlZmQ1NzU1YmVmZTRkNjk2NWIwOSIsInByb2ZpbGUiOiJ1cGxvYWRzL3Byb2ZpbGVzLzE3MTA0MTk5NjA2ODRfb3JieXRleC5wbmciLCJuYW1lIjoidGVzdGVyMTIzIiwiZW1haWwiOiJ0ZXN0ZXIxMjNAZ21haWwuY29tIiwiZ2VuZGVyIjoibWFsZSIsImlzQWRtaW4iOmZhbHNlLCJkYXRlIjoiMjAyNC0wMy0xNFQxMjozODo0NS41NjdaIiwiX192IjowfSwiaWF0IjoxNzEwNDIxODYwfQ.Gn0eUA1x2FMkbGCuMEhAkbT_CO8i-IeFNJJDr7qGWlo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/v1/user/65f2efd5755befe4d6965b09",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"v1",
+								"user",
+								"65f2efd5755befe4d6965b09"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add follower for paticular user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Il9pZCI6IjY1ZjMxMWQ4ZWQ2YjdkM2RlMzYyNDQyMiIsInByb2ZpbGUiOiJodHRwOi8vbG9jYWxob3N0OjQwMDAvdXBsb2Fkcy9wcm9maWxlcy8xNzEwNDI4NjMyMDgwX2wxdkdWMHlFXzQwMHg0MDAuanBnIiwibmFtZSI6InRlc3RlciIsImVtYWlsIjoidGVzdGVyMTIzQGdtYWlsLmNvbSIsImdlbmRlciI6Im1hbGUiLCJpc0FkbWluIjpmYWxzZSwiZm9sbG93ZXJzIjpbXSwiZGF0ZSI6IjIwMjQtMDMtMTRUMTU6MDM6NTIuMTMxWiIsIl9fdiI6MH0sImlhdCI6MTcxMDQyODY1M30.dO1l2hpvfrbrni_i7B83uJOL-8KxvUFv0XgQvblp70g",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/v1/user/follow?id=65f311d8ed6b7d3de3624422",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"v1",
+								"user",
+								"follow"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "65f311d8ed6b7d3de3624422"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "blogs",
+			"item": [
+				{
+					"name": "add blog",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Il9pZCI6IjY1ZjMxMWQ4ZWQ2YjdkM2RlMzYyNDQyMiIsInByb2ZpbGUiOiJodHRwOi8vbG9jYWxob3N0OjQwMDAvdXBsb2Fkcy9wcm9maWxlcy8xNzEwNDI4NjMyMDgwX2wxdkdWMHlFXzQwMHg0MDAuanBnIiwibmFtZSI6InRlc3RlciIsImVtYWlsIjoidGVzdGVyMTIzQGdtYWlsLmNvbSIsImdlbmRlciI6Im1hbGUiLCJpc0FkbWluIjpmYWxzZSwiZm9sbG93ZXJzIjpbXSwiZGF0ZSI6IjIwMjQtMDMtMTRUMTU6MDM6NTIuMTMxWiIsIl9fdiI6MH0sImlhdCI6MTcxMDQyODY1M30.dO1l2hpvfrbrni_i7B83uJOL-8KxvUFv0XgQvblp70g",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "fdfdvfdvv",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "vfdvfdvfdvfd",
+									"type": "text"
+								},
+								{
+									"key": "blog",
+									"type": "file",
+									"src": "/C:/Users/dell/Downloads/orbytex.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/v1/blog/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"v1",
+								"blog",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all blog",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Il9pZCI6IjY1ZjMxMWQ4ZWQ2YjdkM2RlMzYyNDQyMiIsInByb2ZpbGUiOiJodHRwOi8vbG9jYWxob3N0OjQwMDAvdXBsb2Fkcy9wcm9maWxlcy8xNzEwNDI4NjMyMDgwX2wxdkdWMHlFXzQwMHg0MDAuanBnIiwibmFtZSI6InRlc3RlciIsImVtYWlsIjoidGVzdGVyMTIzQGdtYWlsLmNvbSIsImdlbmRlciI6Im1hbGUiLCJpc0FkbWluIjpmYWxzZSwiZm9sbG93ZXJzIjpbXSwiZGF0ZSI6IjIwMjQtMDMtMTRUMTU6MDM6NTIuMTMxWiIsIl9fdiI6MH0sImlhdCI6MTcxMDQyODY1M30.dO1l2hpvfrbrni_i7B83uJOL-8KxvUFv0XgQvblp70g",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/v1/blog/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"v1",
+								"blog",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get blog details by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Il9pZCI6IjY1ZjJlZmQ1NzU1YmVmZTRkNjk2NWIwOSIsInByb2ZpbGUiOiJ1cGxvYWRzL3Byb2ZpbGVzLzE3MTA0MTk5NjA2ODRfb3JieXRleC5wbmciLCJuYW1lIjoidGVzdGVyMTIzIiwiZW1haWwiOiJ0ZXN0ZXIxMjNAZ21haWwuY29tIiwiZ2VuZGVyIjoibWFsZSIsImlzQWRtaW4iOmZhbHNlLCJkYXRlIjoiMjAyNC0wMy0xNFQxMjozODo0NS41NjdaIiwiX192IjowfSwiaWF0IjoxNzEwNDIxODYwfQ.Gn0eUA1x2FMkbGCuMEhAkbT_CO8i-IeFNJJDr7qGWlo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/v1/blog/65f2f76fa79172f23f4b8182",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"v1",
+								"blog",
+								"65f2f76fa79172f23f4b8182"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update blog details by id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Il9pZCI6IjY1ZjJlZmQ1NzU1YmVmZTRkNjk2NWIwOSIsInByb2ZpbGUiOiJ1cGxvYWRzL3Byb2ZpbGVzLzE3MTA0MTk5NjA2ODRfb3JieXRleC5wbmciLCJuYW1lIjoidGVzdGVyMTIzIiwiZW1haWwiOiJ0ZXN0ZXIxMjNAZ21haWwuY29tIiwiZ2VuZGVyIjoibWFsZSIsImlzQWRtaW4iOmZhbHNlLCJkYXRlIjoiMjAyNC0wMy0xNFQxMjozODo0NS41NjdaIiwiX192IjowfSwiaWF0IjoxNzEwNDIxODYwfQ.Gn0eUA1x2FMkbGCuMEhAkbT_CO8i-IeFNJJDr7qGWlo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\": \"xxxxxx\",\r\n    \"title\": \"cdcdcdsjc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/v1/blog/65f2f76fa79172f23f4b8182",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"v1",
+								"blog",
+								"65f2f76fa79172f23f4b8182"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add like for paticular blog",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Il9pZCI6IjY1ZjMxMWQ4ZWQ2YjdkM2RlMzYyNDQyMiIsInByb2ZpbGUiOiJodHRwOi8vbG9jYWxob3N0OjQwMDAvdXBsb2Fkcy9wcm9maWxlcy8xNzEwNDI4NjMyMDgwX2wxdkdWMHlFXzQwMHg0MDAuanBnIiwibmFtZSI6InRlc3RlciIsImVtYWlsIjoidGVzdGVyMTIzQGdtYWlsLmNvbSIsImdlbmRlciI6Im1hbGUiLCJpc0FkbWluIjpmYWxzZSwiZm9sbG93ZXJzIjpbXSwiZGF0ZSI6IjIwMjQtMDMtMTRUMTU6MDM6NTIuMTMxWiIsIl9fdiI6MH0sImlhdCI6MTcxMDQyODY1M30.dO1l2hpvfrbrni_i7B83uJOL-8KxvUFv0XgQvblp70g",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/v1/blog/blogLike?id=65f312c497870f2fa2c73953",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"v1",
+								"blog",
+								"blogLike"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "65f312c497870f2fa2c73953"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "dislike for paticular blog",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Il9pZCI6IjY1ZjJlZmQ1NzU1YmVmZTRkNjk2NWIwOSIsInByb2ZpbGUiOiJ1cGxvYWRzL3Byb2ZpbGVzLzE3MTA0MTk5NjA2ODRfb3JieXRleC5wbmciLCJuYW1lIjoidGVzdGVyMTIzIiwiZW1haWwiOiJ0ZXN0ZXIxMjNAZ21haWwuY29tIiwiZ2VuZGVyIjoibWFsZSIsImlzQWRtaW4iOmZhbHNlLCJkYXRlIjoiMjAyNC0wMy0xNFQxMjozODo0NS41NjdaIiwiX192IjowfSwiaWF0IjoxNzEwNDIxODYwfQ.Gn0eUA1x2FMkbGCuMEhAkbT_CO8i-IeFNJJDr7qGWlo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/v1/blog/blogDislike?id=65f2f76fa79172f23f4b8182",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"v1",
+								"blog",
+								"blogDislike"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "65f2f76fa79172f23f4b8182"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete blog by id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Il9pZCI6IjY1ZjMwNTQxNzA5YzYwMTIwYTFhZTIyOSIsInByb2ZpbGUiOiJodHRwOi8vbG9jYWxob3N0OjQwMDAvdXBsb2Fkcy9wcm9maWxlcy8xNzEwNDI1NDA5NjM2X2wxdkdWMHlFXzQwMHg0MDAuanBnIiwibmFtZSI6InRlc3RlciIsImVtYWlsIjoidGVzdGVyQGdtYWlsLmNvbSIsImdlbmRlciI6Im1hbGUiLCJpc0FkbWluIjpmYWxzZSwiZGF0ZSI6IjIwMjQtMDMtMTRUMTQ6MTA6MDkuNjY0WiIsIl9fdiI6MH0sImlhdCI6MTcxMDQyNTYwOX0.4k_0LeaB0XC4LH5N-QLBke_yKoxjEL1bAScDSZEds0E",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/v1/blog/65f2f76fa79172f23f4b8182",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"v1",
+								"blog",
+								"65f2f76fa79172f23f4b8182"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "comments",
+			"item": [
+				{
+					"name": "add comment for paticular blog",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Il9pZCI6IjY1ZjJlZmQ1NzU1YmVmZTRkNjk2NWIwOSIsInByb2ZpbGUiOiJ1cGxvYWRzL3Byb2ZpbGVzLzE3MTA0MTk5NjA2ODRfb3JieXRleC5wbmciLCJuYW1lIjoidGVzdGVyMTIzIiwiZW1haWwiOiJ0ZXN0ZXIxMjNAZ21haWwuY29tIiwiZ2VuZGVyIjoibWFsZSIsImlzQWRtaW4iOmZhbHNlLCJkYXRlIjoiMjAyNC0wMy0xNFQxMjozODo0NS41NjdaIiwiX192IjowfSwiaWF0IjoxNzEwNDIxODYwfQ.Gn0eUA1x2FMkbGCuMEhAkbT_CO8i-IeFNJJDr7qGWlo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\": \"dscdcdscdscdscsc\",\r\n    \"blogId\": \"65f2f76fa79172f23f4b8182\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/v1/comments/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"v1",
+								"comments",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all commnets",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Il9pZCI6IjY1ZjJlZmQ1NzU1YmVmZTRkNjk2NWIwOSIsInByb2ZpbGUiOiJ1cGxvYWRzL3Byb2ZpbGVzLzE3MTA0MTk5NjA2ODRfb3JieXRleC5wbmciLCJuYW1lIjoidGVzdGVyMTIzIiwiZW1haWwiOiJ0ZXN0ZXIxMjNAZ21haWwuY29tIiwiZ2VuZGVyIjoibWFsZSIsImlzQWRtaW4iOmZhbHNlLCJkYXRlIjoiMjAyNC0wMy0xNFQxMjozODo0NS41NjdaIiwiX192IjowfSwiaWF0IjoxNzEwNDIxODYwfQ.Gn0eUA1x2FMkbGCuMEhAkbT_CO8i-IeFNJJDr7qGWlo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/v1/comments/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"v1",
+								"comments",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

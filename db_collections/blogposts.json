@@ -1,0 +1,23 @@
+[{
+  "_id": {
+    "$oid": "65f312c497870f2fa2c73953"
+  },
+  "title": "node is good ",
+  "content": "node is good ",
+  "images": [
+    "http://localhost:4000/uploads/blogs/1710428861995_orbytex.png"
+  ],
+  "likes": [
+    {
+      "$oid": "65f311d8ed6b7d3de3624422"
+    }
+  ],
+  "dislikes": [],
+  "userId": {
+    "$oid": "65f311d8ed6b7d3de3624422"
+  },
+  "date": {
+    "$date": "2024-03-14T15:07:48.256Z"
+  },
+  "__v": 0
+}]

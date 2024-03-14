@@ -1,0 +1,35 @@
+[{
+  "_id": {
+    "$oid": "65f311d8ed6b7d3de3624422"
+  },
+  "profile": "http://localhost:4000/uploads/profiles/1710428632080_l1vGV0yE_400x400.jpg",
+  "name": "tester",
+  "email": "tester123@gmail.com",
+  "password": "$2b$05$EKUyyObapcpXbLwW5zxbOOX/4orzvU1YQCg8w.Wtkgf4/Rg61qWwi",
+  "gender": "male",
+  "isAdmin": false,
+  "followers": [
+    {
+      "$oid": "65f311d8ed6b7d3de3624422"
+    }
+  ],
+  "date": {
+    "$date": "2024-03-14T15:03:52.131Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "65f31626cdc2f51047dc6769"
+  },
+  "profile": "http://localhost:4000/uploads/profiles/1710429734431_l1vGV0yE_400x400.jpg",
+  "name": "admin",
+  "email": "admin@gmail.com",
+  "password": "$2b$05$5T8ylDyYi3e4IBcM/7dYxunOGMjq22KBTYAQDOjauB0HhyUBkETj.",
+  "gender": "male",
+  "isAdmin": true,
+  "followers": [],
+  "date": {
+    "$date": "2024-03-14T15:22:14.446Z"
+  },
+  "__v": 0
+}]
